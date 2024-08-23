@@ -6,4 +6,4 @@ on:
 
 jobs:
   call-workflow-in-another-repo:
-    uses: nguyentrungduc134/python_hook/.github/workflows/matrix.yml@main 
+    uses: nguyentrungduc134/python_hook/.github/workflows/matrix.yaml@main 
