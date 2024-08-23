@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Check pattern
  
 on:
   workflow_dispatch: {}
@@ -7,12 +7,3 @@ on:
 jobs:
   call-workflow-in-another-repo:
     uses: nguyentrungduc134/python_hook/.github/workflows/matrix.yml@main 
-- name: Checkout
-  uses: actions/checkout@v4
-  with:
-    path: main
-
-- name: Checkout private tools
-  uses: actions/checkout@v4
-  with:
-    repository: nguyentrungduc134/python_hook
