@@ -1,0 +1,4 @@
+-   repo: https://github.com/nguyentrungduc134/python_hook
+    rev: '1.0.0'  # Fill this in with a current revision
+    hooks:
+    -   id: pattern
