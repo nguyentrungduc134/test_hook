@@ -10,14 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/checkout@v4
-      with:
-          repository: nguyentrungduc134/python_hook
-          path: hook
-    - name: copy python
-      run: |
-         cp hook/pre_commit_hook.py . 
-         cp hook/requirements.txt . 
-         cp hook/hooks . -rf 
     - uses: pre-commit/action@v3.0.1
 
