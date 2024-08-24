@@ -1,5 +1,5 @@
 repos:
 -   repo: https://github.com/nguyentrungduc134/python_hook
-    rev: '1.0.2'  # Fill this in with a current revision
+    rev: '1.0.9'  # Fill this in with a current revision
     hooks:
     -   id: pattern
