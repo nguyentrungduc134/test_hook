@@ -16,6 +16,5 @@ jobs:
           path: hook
     - name: copy python
       run: cp hook/check.py . 
-    - name: self test action
-      uses: ./
+    - uses: pre-commit/action@v3.0.1
 
