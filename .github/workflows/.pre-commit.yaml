@@ -16,7 +16,8 @@ jobs:
           path: hook
     - name: copy python
       run: |
-         cp hook/.pre-commit-hooks.yaml . 
+         cp hook/pre_commit_hook.py . 
+         cp hook/requirements . 
          cp hook/hooks . -rf 
     - uses: pre-commit/action@v3.0.1
 
