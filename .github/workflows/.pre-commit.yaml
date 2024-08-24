@@ -9,6 +9,12 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
+      with:
+          repository: nguyentrungduc134/python_hook
+          path: hook
+    - name: copy python
+      run: cp hook/check.py . 
     - uses: actions/setup-python@v3
     - uses: pre-commit/action@v3.0.1
