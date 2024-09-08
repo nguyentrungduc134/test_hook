@@ -17,7 +17,7 @@ jobs:
     - name: Setup credentials to access private repositories
       run: echo ${{ steps.app-token.outputs.token }}    
     - name: Setup credentials to access private repositories
-      run: git config --global url.https://Iv23lixePsPcUYb6IsI4:${{ steps.app-token.outputs.token }}@github.com/.insteadOf https://github.com/    
+      run: git clone https://x:{{ steps.app-token.outputs.token }}github.com/nguyentrungduc134/docker_hook.git
     - uses: actions/checkout@v4
     - uses: pre-commit/action@v3.0.1
 
