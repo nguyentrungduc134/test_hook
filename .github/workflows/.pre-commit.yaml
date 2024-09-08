@@ -9,6 +9,8 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
+    - name: Setup credentials to access private repositories
+      run: git config --global url.https://${{ secrets.MY_PAT }}@github.com/.insteadOf https://github.com/    
     - uses: actions/checkout@v4
     - uses: pre-commit/action@v3.0.1
 
