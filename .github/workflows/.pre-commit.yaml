@@ -16,8 +16,6 @@ jobs:
           private-key: ${{ secrets.APP }}
           owner: ${{ github.repository_owner }}
     - name: Setup credentials to access private repositories
-      run: echo ${{ steps.app-token.outputs.token }}    
-    - name: Setup credentials to access private repositories
       run: git config --global url.https:///x-access-token:${{ steps.app-token.outputs.token }}@github.com/.insteadOf https://github.com/
     - uses: actions/checkout@v4
     - uses: pre-commit/action@v3.0.1
