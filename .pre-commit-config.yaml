@@ -1,5 +1,5 @@
 repos:
--   repo: https://github.com/nguyentrungduc134/python_hook
+-   repo: https://github.com/nguyentrungduc134/docker_hook
     rev: '2.2.0'  # Fill this in with a current revision
     hooks:
     -   id: pattern
