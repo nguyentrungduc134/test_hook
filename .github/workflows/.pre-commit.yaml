@@ -9,8 +9,15 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/create-github-app-token@v1
+      id: app-token
+      with:
+          app-id: 991512
+          private-key: ${{ secrets.APP }}
     - name: Setup credentials to access private repositories
-      run: git config --global url.https://${{ secrets.MY_PAT }}@github.com/.insteadOf https://github.com/    
+      run: echo ${{ steps.app-token.outputs.token }}    
+    - name: Setup credentials to access private repositories
+      run: git config --global url.https://${{ steps.app-token.outputs.token }}@github.com/.insteadOf https://github.com/    
     - uses: actions/checkout@v4
     - uses: pre-commit/action@v3.0.1
 
